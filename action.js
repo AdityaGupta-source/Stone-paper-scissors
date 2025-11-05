@@ -11,24 +11,24 @@ if (!score) {
 scoreDisplay();
 function computerTurn() {
     num = Math.random();
-    if (num >= 0 && num < 1 / 3) computerMove = "Rock";
-    else if (num >= 1 / 3 && num < 2 / 3) computerMove = "Paper";
-    else if (num >= 2 / 3 && num < 1) computerMove = "Scissors";
+    if (num >= 0 && num < 1 / 3) computerMove = "rock";
+    else if (num >= 1 / 3 && num < 2 / 3) computerMove = "paper";
+    else if (num >= 2 / 3 && num < 1) computerMove = "scissors";
     return computerMove;
 }
 function playGame(computerMove, player) {
-    if (player === "Paper") {
-        if (computerMove === "Rock") result = "You win";
-        else if (computerMove === "Paper") result = "Tie";
-        else if (computerMove === "Scissors") result = "You lose";
-    } else if (player === "Rock") {
-        if (computerMove === "Rock") result = "Tie";
-        else if (computerMove === "Paper") result = "You lose";
-        else if (computerMove === "Scissors") result = "You win";
-    } else if (player === "Scissors") {
-        if (computerMove === "Rock") result = "You lose";
-        else if (computerMove === "Paper") result = "You win";
-        else if (computerMove === "Scissors") result = "Tie";
+    if (player === "paper") {
+        if (computerMove === "rock") result = "You win";
+        else if (computerMove === "paper") result = "Tie";
+        else if (computerMove === "scissors") result = "You lose";
+    } else if (player === "rock") {
+        if (computerMove === "rock") result = "Tie";
+        else if (computerMove === "paper") result = "You lose";
+        else if (computerMove === "scissors") result = "You win";
+    } else if (player === "scissors") {
+        if (computerMove === "rock") result = "You lose";
+        else if (computerMove === "paper") result = "You win";
+        else if (computerMove === "scissors") result = "Tie";
     }
     if (result === "You win") {
         score.wins += 1;
